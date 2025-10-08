@@ -1,0 +1,2007 @@
+8.5s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.5s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.5s 3 0.00s - to python to disable frozen modules.
+8.5s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+9.1s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+9.1s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+9.1s 7 0.00s - to python to disable frozen modules.
+9.1s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+27.2s 9 🔍 Initializing HYBRID SOTA ARC Solver - DEBUG VERSION
+27.2s 10 ================================================================================
+27.2s 11 
+27.2s 12 ================================================================================
+27.2s 13 🎯 HYBRID SOTA ARC SOLVER - DEBUG MODE
+27.2s 14 ================================================================================
+27.2s 15 
+27.2s 16 
+27.2s 17 ================================================================================
+27.2s 18 🧪 TESTING DSL OPERATIONS
+27.2s 19 ================================================================================
+27.2s 20 
+27.2s 21 Test grid:
+27.2s 22 [[1 2]
+27.2s 23 [3 4]]
+27.2s 24 
+27.2s 25 rotate90:
+27.2s 26 [[3 1]
+27.2s 27 [4 2]]
+27.2s 28 
+27.2s 29 rotate180:
+27.2s 30 [[4 3]
+27.2s 31 [2 1]]
+27.2s 32 
+27.2s 33 flip_h:
+27.2s 34 [[2 1]
+27.2s 35 [4 3]]
+27.2s 36 
+27.2s 37 flip_v:
+27.2s 38 [[3 4]
+27.2s 39 [1 2]]
+27.2s 40 
+27.2s 41 transpose:
+27.2s 42 [[1 3]
+27.2s 43 [2 4]]
+27.2s 44 
+27.2s 45 tile_scale(2,2):
+27.2s 46 [[1 1 2 2]
+27.2s 47 [1 1 2 2]
+27.2s 48 [3 3 4 4]
+27.2s 49 [3 3 4 4]]
+27.2s 50 
+27.2s 51 most_common_color: 1
+27.2s 52 
+27.2s 53 ✅ All basic DSL operations working!
+27.2s 54 
+27.2s 55 ⚠️ LLM loading DISABLED in debug mode (focusing on symbolic solver)
+27.2s 56 
+27.2s 57 🔧 Initializing Hybrid Solver...
+27.2s 58 ✅ Solver ready!
+27.2s 59 - Tier 1: Fast Symbolic (5s timeout)
+27.2s 60 - Tier 2: Beam Search (15s timeout, beam=12, depth=3)
+27.2s 61 - Tier 3: DISABLED (debug mode)
+27.2s 62 
+27.2s 63 📂 Loading evaluation tasks...
+27.2s 64 Using: /kaggle/input/arc-prize-2025/arc-agi_evaluation_challenges.json
+27.2s 65 ✅ Loaded 120 tasks
+27.2s 66 ⚠️  DEBUG MODE: Testing first 10 tasks only
+27.2s 67 
+27.2s 68 ================================================================================
+27.2s 69 🧠 Solving Tasks (DEBUG MODE)
+27.2s 70 ================================================================================
+27.2s 71 
+27.2s 72 
+27.2s 73 ================================================================================
+27.2s 74 TASK 1/10: 0934a4d8
+27.2s 75 ================================================================================
+27.2s 76 [TASK] Converting training pairs...
+27.2s 77 [TASK] Train pairs: 4
+27.2s 78 Pair 0: input (30, 30) dtype=int64, output (9, 4) dtype=int64
+27.2s 79 Pair 1: input (30, 30) dtype=int64, output (4, 5) dtype=int64
+27.2s 80 Pair 2: input (30, 30) dtype=int64, output (3, 7) dtype=int64
+27.2s 81 Pair 3: input (30, 30) dtype=int64, output (4, 4) dtype=int64
+27.2s 82 [TASK] Solving test case 1/1
+27.2s 83 Test input: (30, 30) dtype=int64
+27.2s 84 [ORCHESTRATOR] Trying Tier 1...
+27.2s 85 [TIER 1] Starting solve (timeout=5s)
+27.2s 86 [TIER 1] Train pairs: 4
+27.2s 87 [TIER 1] Trying palette-only...
+27.2s 88 [TIER 1] Generating feature-driven candidates...
+27.2s 89 [TIER 1] Generated 28 candidates
+27.2s 90 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 91 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 92 [TIER 1] ✗ All candidates failed
+27.2s 93 [ORCHESTRATOR] Trying Tier 2...
+27.2s 94 [TIER 2] Starting beam search (width=12, depth=3)
+27.2s 95 [TIER 2] Operator pool size: 10
+27.2s 96 [TIER 2] Exploring depth 1, frontier size: 1
+27.2s 97 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 98 [TIER 2] Exploring depth 2, frontier size: 10
+27.2s 99 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 100 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 101 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 102 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 103 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 104 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 105 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 106 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.2s 107 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.2s 108 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 109 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 110 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 111 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 112 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 113 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 114 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 115 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 116 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 117 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 118 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 119 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 120 [TIER 2] Exploring depth 3, frontier size: 12
+27.2s 121 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.2s 122 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 123 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 124 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 125 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 126 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 127 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 128 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.4s 129 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.4s 130 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 131 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 132 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 133 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 134 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 135 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 136 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 137 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 138 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 139 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 140 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 141 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 142 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 143 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 144 [TIER 2] ✗ Search exhausted
+27.4s 145 [ORCHESTRATOR] ✗ No programs found, using fallback
+27.4s 146 
+27.4s 147 ✓ Task 1 complete: 0934a4d8... (0.3s)
+27.4s 148 
+27.4s 149 ================================================================================
+27.4s 150 TASK 2/10: 135a2760
+27.4s 151 ================================================================================
+27.4s 152 [TASK] Converting training pairs...
+27.4s 153 [TASK] Train pairs: 2
+27.4s 154 Pair 0: input (5, 13) dtype=int64, output (5, 13) dtype=int64
+27.4s 155 Pair 1: input (21, 22) dtype=int64, output (21, 22) dtype=int64
+27.4s 156 [TASK] Solving test case 1/1
+27.4s 157 Test input: (29, 29) dtype=int64
+27.4s 158 [ORCHESTRATOR] Trying Tier 1...
+27.4s 159 [TIER 1] Starting solve (timeout=5s)
+27.4s 160 [TIER 1] Train pairs: 2
+27.4s 161 [TIER 1] Trying palette-only...
+27.4s 162 [TIER 1] Generating feature-driven candidates...
+27.4s 163 [TIER 1] Generated 28 candidates
+27.4s 164 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 165 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 166 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 167 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 168 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 169 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 170 [TIER 1] ✗ All candidates failed
+27.4s 171 [ORCHESTRATOR] Trying Tier 2...
+27.4s 172 [TIER 2] Starting beam search (width=12, depth=3)
+27.4s 173 [TIER 2] Operator pool size: 10
+27.4s 174 [TIER 2] Exploring depth 1, frontier size: 1
+27.4s 175 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 176 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 177 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 178 [TIER 2] Exploring depth 2, frontier size: 10
+27.4s 179 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 180 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 181 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 182 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 183 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 184 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 185 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 186 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 187 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 188 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 189 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 190 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 191 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 192 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 193 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 194 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 195 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 196 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 197 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 198 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (3,5) into shape (3,6)
+27.4s 199 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 200 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 201 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 202 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 203 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 204 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 205 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 206 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 207 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 208 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 209 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 210 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 211 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 212 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 213 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 214 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 215 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 216 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 217 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 218 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 219 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 220 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 221 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 222 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 223 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 224 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 225 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 226 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 227 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 228 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 229 [TIER 2] Exploring depth 3, frontier size: 12
+27.4s 230 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 231 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 232 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 233 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 234 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 235 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 236 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 237 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 238 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 239 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 240 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 241 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 242 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 243 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 244 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 245 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 246 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 247 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 248 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 249 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,3) into shape (6,3)
+27.4s 250 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 251 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 252 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 253 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 254 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 255 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 256 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 257 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 258 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 259 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 260 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 261 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 262 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 263 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 264 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 265 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 266 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 267 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 268 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 269 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 270 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 271 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 272 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 273 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 274 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 275 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 276 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 277 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 278 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 279 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 280 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 281 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,2) into shape (13,3)
+27.4s 282 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (7,5)
+27.4s 283 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 284 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (5,7)
+27.4s 285 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,13) into shape (3,13)
+27.4s 286 [TIER 2] ✗ Search exhausted
+27.4s 287 [ORCHESTRATOR] ✗ No programs found, using fallback
+27.4s 288 
+27.4s 289 ✓ Task 2 complete: 135a2760... (0.0s)
+27.4s 290 
+27.4s 291 ================================================================================
+27.4s 292 TASK 3/10: 136b0064
+27.4s 293 ================================================================================
+27.4s 294 [TASK] Converting training pairs...
+27.4s 295 [TASK] Train pairs: 3
+27.4s 296 Pair 0: input (15, 15) dtype=int64, output (15, 7) dtype=int64
+27.4s 297 Pair 1: input (7, 15) dtype=int64, output (7, 7) dtype=int64
+27.4s 298 Pair 2: input (11, 15) dtype=int64, output (11, 7) dtype=int64
+27.4s 299 [TASK] Solving test case 1/1
+27.4s 300 Test input: (19, 15) dtype=int64
+27.4s 301 [ORCHESTRATOR] Trying Tier 1...
+27.4s 302 [TIER 1] Starting solve (timeout=5s)
+27.4s 303 [TIER 1] Train pairs: 3
+27.4s 304 [TIER 1] Trying palette-only...
+27.4s 305 [TIER 1] Generating feature-driven candidates...
+27.4s 306 [TIER 1] Generated 32 candidates
+27.4s 307 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 308 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 309 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 310 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 311 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 312 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 313 [TIER 1] ✗ All candidates failed
+27.4s 314 [ORCHESTRATOR] Trying Tier 2...
+27.4s 315 [TIER 2] Starting beam search (width=12, depth=3)
+27.4s 316 [TIER 2] Operator pool size: 11
+27.4s 317 [TIER 2] Exploring depth 1, frontier size: 1
+27.4s 318 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 319 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 320 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 321 [TIER 2] Exploring depth 2, frontier size: 11
+27.4s 322 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 323 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 324 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 325 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 326 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 327 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 328 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 329 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 330 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 331 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 332 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 333 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 334 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 335 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 336 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 337 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 338 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 339 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 340 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 341 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,3) into shape (15,4)
+27.4s 342 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,7) into shape (8,7)
+27.4s 343 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 344 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,4) into shape (8,4)
+27.4s 345 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 346 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 347 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 348 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 349 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 350 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 351 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 352 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 353 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 354 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 355 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 356 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 357 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 358 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 359 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 360 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 361 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 362 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 363 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 364 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 365 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 366 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 367 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 368 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 369 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 370 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 371 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 372 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 373 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 374 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 375 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 376 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 377 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 378 [TIER 2] Exploring depth 3, frontier size: 12
+27.4s 379 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 380 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 381 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 382 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 383 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 384 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 385 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 386 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 387 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 388 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 389 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 390 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 391 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 392 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 393 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 394 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 395 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 396 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 397 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 398 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,3) into shape (15,4)
+27.4s 399 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,7) into shape (8,7)
+27.4s 400 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 401 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,7) into shape (4,8)
+27.4s 402 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 403 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 404 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 405 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 406 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 407 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 408 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 409 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 410 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 411 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 412 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 413 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 414 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 415 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 416 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 417 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 418 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 419 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 420 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 421 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 422 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 423 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 424 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 425 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 426 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 427 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 428 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 429 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 430 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 431 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 432 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 433 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 434 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 435 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 436 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,7) into shape (15,8)
+27.4s 437 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,15) into shape (8,15)
+27.4s 438 [TIER 2] ✗ Search exhausted
+27.4s 439 [ORCHESTRATOR] ✗ No programs found, using fallback
+27.4s 440 
+27.4s 441 ✓ Task 3 complete: 136b0064... (0.0s)
+27.4s 442 
+27.4s 443 ================================================================================
+27.4s 444 TASK 4/10: 13e47133
+27.4s 445 ================================================================================
+27.4s 446 [TASK] Converting training pairs...
+27.4s 447 [TASK] Train pairs: 3
+27.4s 448 Pair 0: input (20, 20) dtype=int64, output (20, 20) dtype=int64
+27.4s 449 Pair 1: input (20, 20) dtype=int64, output (20, 20) dtype=int64
+27.4s 450 Pair 2: input (10, 13) dtype=int64, output (10, 13) dtype=int64
+27.4s 451 [TASK] Solving test case 1/2
+27.4s 452 Test input: (30, 30) dtype=int64
+27.4s 453 [ORCHESTRATOR] Trying Tier 1...
+27.4s 454 [TIER 1] Starting solve (timeout=5s)
+27.4s 455 [TIER 1] Train pairs: 3
+27.4s 456 [TIER 1] Trying palette-only...
+27.4s 457 [TIER 1] Generating feature-driven candidates...
+27.4s 458 [TIER 1] Generated 28 candidates
+27.4s 459 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 460 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 461 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 462 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 463 [TIER 1] ✗ All candidates failed
+27.4s 464 [ORCHESTRATOR] Trying Tier 2...
+27.4s 465 [TIER 2] Starting beam search (width=12, depth=3)
+27.4s 466 [TIER 2] Operator pool size: 10
+27.4s 467 [TIER 2] Exploring depth 1, frontier size: 1
+27.4s 468 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 469 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 470 [TIER 2] Exploring depth 2, frontier size: 10
+27.4s 471 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 472 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.4s 473 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 474 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 475 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 476 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.4s 477 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 478 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 479 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 480 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 481 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 482 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.4s 483 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 484 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.4s 485 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 486 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 487 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 488 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 489 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 490 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 491 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 492 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 493 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 494 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 495 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 496 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 497 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 498 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 499 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 500 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 501 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 502 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 503 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 504 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 505 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 506 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 507 [TIER 2] Exploring depth 3, frontier size: 12
+27.4s 508 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 509 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 510 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 511 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.4s 512 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 513 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.4s 514 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 515 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.4s 516 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.4s 517 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.4s 518 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 519 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 520 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 521 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.6s 522 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 523 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 524 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 525 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 526 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 527 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 528 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 529 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 530 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 531 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 532 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 533 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 534 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 535 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 536 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 537 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 538 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 539 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 540 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 541 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 542 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 543 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 544 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 545 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 546 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 547 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 548 [TIER 2] ✗ Search exhausted
+27.6s 549 [ORCHESTRATOR] ✗ No programs found, using fallback
+27.6s 550 [TASK] Solving test case 2/2
+27.6s 551 Test input: (30, 30) dtype=int64
+27.6s 552 [ORCHESTRATOR] Trying Tier 1...
+27.6s 553 [TIER 1] Starting solve (timeout=5s)
+27.6s 554 [TIER 1] Train pairs: 3
+27.6s 555 [TIER 1] Trying palette-only...
+27.6s 556 [TIER 1] Generating feature-driven candidates...
+27.6s 557 [TIER 1] Generated 28 candidates
+27.6s 558 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 559 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 560 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 561 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 562 [TIER 1] ✗ All candidates failed
+27.6s 563 [ORCHESTRATOR] Trying Tier 2...
+27.6s 564 [TIER 2] Starting beam search (width=12, depth=3)
+27.6s 565 [TIER 2] Operator pool size: 10
+27.6s 566 [TIER 2] Exploring depth 1, frontier size: 1
+27.6s 567 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 568 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 569 [TIER 2] Exploring depth 2, frontier size: 10
+27.6s 570 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 571 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 572 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 573 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 574 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 575 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 576 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 577 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 578 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 579 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 580 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 581 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 582 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 583 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.6s 584 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 585 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 586 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 587 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 588 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 589 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 590 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 591 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 592 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 593 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 594 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 595 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 596 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 597 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 598 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 599 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 600 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 601 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 602 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 603 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 604 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 605 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 606 [TIER 2] Exploring depth 3, frontier size: 12
+27.6s 607 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 608 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 609 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 610 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 611 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 612 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 613 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 614 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 615 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 616 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 617 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 618 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 619 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 620 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.6s 621 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 622 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 623 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 624 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 625 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 626 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 627 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 628 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 629 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 630 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 631 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 632 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 633 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 634 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 635 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 636 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 637 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 638 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 639 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 640 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 641 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 642 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 643 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 644 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,10) into shape (7,10)
+27.6s 645 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 646 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (10,6) into shape (10,7)
+27.6s 647 [TIER 2] ✗ Search exhausted
+27.6s 648 [ORCHESTRATOR] ✗ No programs found, using fallback
+27.6s 649 
+27.6s 650 ✓ Task 4 complete: 13e47133... (0.1s)
+27.6s 651 
+27.6s 652 ================================================================================
+27.6s 653 TASK 5/10: 142ca369
+27.6s 654 ================================================================================
+27.6s 655 [TASK] Converting training pairs...
+27.6s 656 [TASK] Train pairs: 3
+27.6s 657 Pair 0: input (20, 20) dtype=int64, output (20, 20) dtype=int64
+27.6s 658 Pair 1: input (18, 18) dtype=int64, output (18, 18) dtype=int64
+27.6s 659 Pair 2: input (20, 20) dtype=int64, output (20, 20) dtype=int64
+27.6s 660 [TASK] Solving test case 1/2
+27.6s 661 Test input: (18, 18) dtype=int64
+27.6s 662 [ORCHESTRATOR] Trying Tier 1...
+27.6s 663 [TIER 1] Starting solve (timeout=5s)
+27.6s 664 [TIER 1] Train pairs: 3
+27.6s 665 [TIER 1] Trying palette-only...
+27.6s 666 [TIER 1] Generating feature-driven candidates...
+27.6s 667 [TIER 1] Generated 28 candidates
+27.6s 668 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 669 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 670 [TIER 1] ✗ All candidates failed
+27.6s 671 [ORCHESTRATOR] Trying Tier 2...
+27.6s 672 [TIER 2] Starting beam search (width=12, depth=3)
+27.6s 673 [TIER 2] Operator pool size: 10
+27.6s 674 [TIER 2] Exploring depth 1, frontier size: 1
+27.6s 675 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 676 [TIER 2] Exploring depth 2, frontier size: 10
+27.6s 677 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 678 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 679 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 680 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 681 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 682 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 683 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 684 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (3,0) into shape (3,1)
+27.6s 685 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 686 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 687 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 688 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 689 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 690 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 691 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 692 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 693 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 694 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 695 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 696 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 697 [TIER 2] Exploring depth 3, frontier size: 12
+27.6s 698 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 699 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 700 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 701 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 702 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 703 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 704 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 705 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (0,3) into shape (1,3)
+27.6s 706 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 707 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 708 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 709 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 710 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 711 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 712 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 713 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 714 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 715 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 716 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 717 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 718 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 719 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 720 [TIER 2] ✗ Search exhausted
+27.6s 721 [ORCHESTRATOR] ✗ No programs found, using fallback
+27.6s 722 [TASK] Solving test case 2/2
+27.6s 723 Test input: (20, 19) dtype=int64
+27.6s 724 [ORCHESTRATOR] Trying Tier 1...
+27.6s 725 [TIER 1] Starting solve (timeout=5s)
+27.6s 726 [TIER 1] Train pairs: 3
+27.6s 727 [TIER 1] Trying palette-only...
+27.6s 728 [TIER 1] Generating feature-driven candidates...
+27.6s 729 [TIER 1] Generated 28 candidates
+27.6s 730 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 731 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 732 [TIER 1] ✗ All candidates failed
+27.6s 733 [ORCHESTRATOR] Trying Tier 2...
+27.6s 734 [TIER 2] Starting beam search (width=12, depth=3)
+27.6s 735 [TIER 2] Operator pool size: 10
+27.6s 736 [TIER 2] Exploring depth 1, frontier size: 1
+27.6s 737 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 738 [TIER 2] Exploring depth 2, frontier size: 10
+27.6s 739 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 740 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 741 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 742 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 743 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 744 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 745 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 746 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (3,0) into shape (3,1)
+27.6s 747 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 748 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 749 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 750 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 751 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 752 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 753 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 754 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 755 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 756 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 757 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 758 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 759 [TIER 2] Exploring depth 3, frontier size: 12
+27.6s 760 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 761 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 762 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 763 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 764 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 765 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 766 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 767 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (0,3) into shape (1,3)
+27.6s 768 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 769 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 770 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 771 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 772 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 773 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 774 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 775 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 776 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 777 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 778 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 779 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 780 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 781 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 782 [TIER 2] ✗ Search exhausted
+27.6s 783 [ORCHESTRATOR] ✗ No programs found, using fallback
+27.6s 784 
+27.6s 785 ✓ Task 5 complete: 142ca369... (0.1s)
+27.6s 786 
+27.6s 787 📊 Progress: 5/10 tasks
+27.6s 788 ⏱️  Elapsed: 0.0min, Est. remaining: 0.0min
+27.6s 789 📈 Stats: T1=0, T2=0, T3=0, Fail=7
+27.6s 790 
+27.6s 791 ================================================================================
+27.6s 792 TASK 6/10: 16b78196
+27.6s 793 ================================================================================
+27.6s 794 [TASK] Converting training pairs...
+27.6s 795 [TASK] Train pairs: 2
+27.6s 796 Pair 0: input (30, 30) dtype=int64, output (30, 30) dtype=int64
+27.6s 797 Pair 1: input (30, 30) dtype=int64, output (30, 30) dtype=int64
+27.6s 798 [TASK] Solving test case 1/1
+27.6s 799 Test input: (30, 30) dtype=int64
+27.6s 800 [ORCHESTRATOR] Trying Tier 1...
+27.6s 801 [TIER 1] Starting solve (timeout=5s)
+27.6s 802 [TIER 1] Train pairs: 2
+27.6s 803 [TIER 1] Trying palette-only...
+27.6s 804 [TIER 1] Generating feature-driven candidates...
+27.6s 805 [TIER 1] Generated 28 candidates
+27.6s 806 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 807 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 808 [TIER 1] ✗ All candidates failed
+27.6s 809 [ORCHESTRATOR] Trying Tier 2...
+27.6s 810 [TIER 2] Starting beam search (width=12, depth=3)
+27.6s 811 [TIER 2] Operator pool size: 10
+27.6s 812 [TIER 2] Exploring depth 1, frontier size: 1
+27.6s 813 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 814 [TIER 2] Exploring depth 2, frontier size: 10
+27.6s 815 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 816 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 817 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 818 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 819 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 820 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 821 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 822 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,30) into shape (3,30)
+27.6s 823 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 824 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 825 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 826 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 827 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 828 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 829 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 830 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 831 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 832 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 833 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 834 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 835 [TIER 2] Exploring depth 3, frontier size: 12
+27.6s 836 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 837 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 838 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 839 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 840 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 841 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 842 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 843 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (30,2) into shape (30,3)
+27.6s 844 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 845 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 846 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 847 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 848 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 849 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 850 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 851 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 852 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.6s 853 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 854 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 855 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 856 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 857 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 858 [TIER 2] ✗ Search exhausted
+27.8s 859 [ORCHESTRATOR] ✗ No programs found, using fallback
+27.8s 860 
+27.8s 861 ✓ Task 6 complete: 16b78196... (0.1s)
+27.8s 862 
+27.8s 863 ================================================================================
+27.8s 864 TASK 7/10: 16de56c4
+27.8s 865 ================================================================================
+27.8s 866 [TASK] Converting training pairs...
+27.8s 867 [TASK] Train pairs: 3
+27.8s 868 Pair 0: input (12, 9) dtype=int64, output (12, 9) dtype=int64
+27.8s 869 Pair 1: input (9, 20) dtype=int64, output (9, 20) dtype=int64
+27.8s 870 Pair 2: input (7, 15) dtype=int64, output (7, 15) dtype=int64
+27.8s 871 [TASK] Solving test case 1/2
+27.8s 872 Test input: (9, 21) dtype=int64
+27.8s 873 [ORCHESTRATOR] Trying Tier 1...
+27.8s 874 [TIER 1] Starting solve (timeout=5s)
+27.8s 875 [TIER 1] Train pairs: 3
+27.8s 876 [TIER 1] Trying palette-only...
+27.8s 877 [TIER 1] Generating feature-driven candidates...
+27.8s 878 [TIER 1] Generated 28 candidates
+27.8s 879 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 880 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 881 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 882 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 883 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 884 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 885 [TIER 1] ✗ All candidates failed
+27.8s 886 [ORCHESTRATOR] Trying Tier 2...
+27.8s 887 [TIER 2] Starting beam search (width=12, depth=3)
+27.8s 888 [TIER 2] Operator pool size: 10
+27.8s 889 [TIER 2] Exploring depth 1, frontier size: 1
+27.8s 890 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 891 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 892 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 893 [TIER 2] Exploring depth 2, frontier size: 10
+27.8s 894 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 895 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 896 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 897 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 898 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 899 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 900 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 901 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 902 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 903 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 904 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 905 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 906 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 907 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 908 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 909 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 910 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 911 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 912 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,0) into shape (2,1)
+27.8s 913 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (0,2) into shape (1,2)
+27.8s 914 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 915 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 916 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 917 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 918 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 919 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 920 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 921 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 922 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 923 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 924 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 925 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 926 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 927 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 928 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 929 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 930 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 931 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 932 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 933 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 934 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 935 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 936 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 937 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 938 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 939 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 940 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 941 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 942 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 943 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 944 [TIER 2] Exploring depth 3, frontier size: 12
+27.8s 945 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 946 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 947 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 948 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 949 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 950 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 951 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 952 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 953 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 954 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 955 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 956 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 957 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 958 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 959 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 960 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 961 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 962 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 963 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,0) into shape (2,1)
+27.8s 964 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (0,2) into shape (1,2)
+27.8s 965 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 966 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 967 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 968 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 969 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 970 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 971 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 972 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 973 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 974 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 975 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 976 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 977 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 978 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 979 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 980 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 981 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 982 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 983 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 984 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 985 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 986 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 987 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 988 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 989 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 990 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 991 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 992 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 993 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 994 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 995 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 996 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 997 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 998 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 999 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1000 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1001 [TIER 2] ✗ Search exhausted
+27.8s 1002 [ORCHESTRATOR] ✗ No programs found, using fallback
+27.8s 1003 [TASK] Solving test case 2/2
+27.8s 1004 Test input: (9, 21) dtype=int64
+27.8s 1005 [ORCHESTRATOR] Trying Tier 1...
+27.8s 1006 [TIER 1] Starting solve (timeout=5s)
+27.8s 1007 [TIER 1] Train pairs: 3
+27.8s 1008 [TIER 1] Trying palette-only...
+27.8s 1009 [TIER 1] Generating feature-driven candidates...
+27.8s 1010 [TIER 1] Generated 28 candidates
+27.8s 1011 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1012 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1013 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1014 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1015 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1016 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1017 [TIER 1] ✗ All candidates failed
+27.8s 1018 [ORCHESTRATOR] Trying Tier 2...
+27.8s 1019 [TIER 2] Starting beam search (width=12, depth=3)
+27.8s 1020 [TIER 2] Operator pool size: 10
+27.8s 1021 [TIER 2] Exploring depth 1, frontier size: 1
+27.8s 1022 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1023 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1024 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1025 [TIER 2] Exploring depth 2, frontier size: 10
+27.8s 1026 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1027 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1028 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1029 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1030 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1031 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1032 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1033 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1034 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1035 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1036 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1037 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1038 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1039 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1040 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1041 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1042 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1043 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1044 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,0) into shape (2,1)
+27.8s 1045 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (0,2) into shape (1,2)
+27.8s 1046 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1047 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1048 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1049 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1050 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1051 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1052 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1053 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1054 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1055 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1056 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1057 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1058 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1059 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1060 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1061 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1062 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1063 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1064 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1065 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1066 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1067 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1068 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1069 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1070 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1071 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1072 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1073 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1074 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1075 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1076 [TIER 2] Exploring depth 3, frontier size: 12
+27.8s 1077 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1078 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1079 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1080 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1081 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1082 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1083 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1084 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1085 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1086 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1087 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1088 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1089 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1090 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1091 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1092 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1093 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1094 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1095 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (2,0) into shape (2,1)
+27.8s 1096 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (0,2) into shape (1,2)
+27.8s 1097 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1098 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1099 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1100 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1101 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1102 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1103 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1104 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1105 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1106 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1107 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1108 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1109 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1110 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1111 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1112 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1113 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1114 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1115 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1116 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1117 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1118 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1119 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1120 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1121 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1122 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1123 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1124 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1125 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1126 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1127 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1128 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (20,4) into shape (20,5)
+27.8s 1129 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1130 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1131 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1132 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,20) into shape (5,20)
+27.8s 1133 [TIER 2] ✗ Search exhausted
+27.8s 1134 [ORCHESTRATOR] ✗ No programs found, using fallback
+27.8s 1135 
+27.8s 1136 ✓ Task 7 complete: 16de56c4... (0.0s)
+27.8s 1137 
+27.8s 1138 ================================================================================
+27.8s 1139 TASK 8/10: 1818057f
+27.8s 1140 ================================================================================
+27.8s 1141 [TASK] Converting training pairs...
+27.8s 1142 [TASK] Train pairs: 3
+27.8s 1143 Pair 0: input (10, 12) dtype=int64, output (10, 12) dtype=int64
+27.8s 1144 Pair 1: input (15, 17) dtype=int64, output (15, 17) dtype=int64
+27.8s 1145 Pair 2: input (12, 12) dtype=int64, output (12, 12) dtype=int64
+27.8s 1146 [TASK] Solving test case 1/1
+27.8s 1147 Test input: (22, 22) dtype=int64
+27.8s 1148 [ORCHESTRATOR] Trying Tier 1...
+27.8s 1149 [TIER 1] Starting solve (timeout=5s)
+27.8s 1150 [TIER 1] Train pairs: 3
+27.8s 1151 [TIER 1] Trying palette-only...
+27.8s 1152 [TIER 1] Generating feature-driven candidates...
+27.8s 1153 [TIER 1] Generated 28 candidates
+27.8s 1154 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1155 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1156 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1157 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1158 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1159 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1160 [TIER 1] ✗ All candidates failed
+27.8s 1161 [ORCHESTRATOR] Trying Tier 2...
+27.8s 1162 [TIER 2] Starting beam search (width=12, depth=3)
+27.8s 1163 [TIER 2] Operator pool size: 10
+27.8s 1164 [TIER 2] Exploring depth 1, frontier size: 1
+27.8s 1165 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1166 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1167 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1168 [TIER 2] Exploring depth 2, frontier size: 10
+27.8s 1169 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1170 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1171 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1172 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1173 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1174 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1175 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1176 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1177 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1178 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1179 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1180 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1181 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1182 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1183 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1184 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1185 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1186 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1187 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1188 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,4) into shape (12,5)
+27.8s 1189 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (3,3) into shape (4,3)
+27.8s 1190 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1191 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1192 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1193 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1194 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1195 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1196 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1197 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1198 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1199 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1200 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1201 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1202 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1203 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1204 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1205 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1206 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1207 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1208 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1209 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1210 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1211 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1212 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1213 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1214 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1215 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1216 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1217 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1218 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1219 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1220 [TIER 2] Exploring depth 3, frontier size: 12
+27.8s 1221 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1222 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1223 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1224 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1225 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1226 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1227 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1228 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1229 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1230 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1231 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1232 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1233 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1234 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1235 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1236 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1237 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1238 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1239 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1240 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (3,3) into shape (3,4)
+27.8s 1241 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,12) into shape (5,12)
+27.8s 1242 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1243 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1244 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1245 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1246 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1247 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1248 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1249 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1250 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1251 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1252 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1253 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1254 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1255 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1256 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1257 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1258 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1259 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1260 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1261 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1262 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1263 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1264 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1265 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1266 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1267 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1268 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1269 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1270 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1271 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1272 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1273 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (17,7) into shape (17,8)
+27.8s 1274 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (8,15) into shape (9,15)
+27.8s 1275 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1276 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (15,8) into shape (15,9)
+27.8s 1277 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,17) into shape (8,17)
+27.8s 1278 [TIER 2] ✗ Search exhausted
+27.8s 1279 [ORCHESTRATOR] ✗ No programs found, using fallback
+27.8s 1280 
+27.8s 1281 ✓ Task 8 complete: 1818057f... (0.0s)
+27.8s 1282 
+27.8s 1283 ================================================================================
+27.8s 1284 TASK 9/10: 195c6913
+27.8s 1285 ================================================================================
+27.8s 1286 [TASK] Converting training pairs...
+27.8s 1287 [TASK] Train pairs: 3
+27.8s 1288 Pair 0: input (20, 20) dtype=int64, output (20, 20) dtype=int64
+27.8s 1289 Pair 1: input (25, 25) dtype=int64, output (25, 25) dtype=int64
+27.8s 1290 Pair 2: input (25, 25) dtype=int64, output (25, 25) dtype=int64
+27.8s 1291 [TASK] Solving test case 1/2
+27.8s 1292 Test input: (30, 30) dtype=int64
+27.8s 1293 [ORCHESTRATOR] Trying Tier 1...
+27.8s 1294 [TIER 1] Starting solve (timeout=5s)
+27.8s 1295 [TIER 1] Train pairs: 3
+27.8s 1296 [TIER 1] Trying palette-only...
+27.8s 1297 [TIER 1] Generating feature-driven candidates...
+27.8s 1298 [TIER 1] Generated 28 candidates
+27.8s 1299 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1300 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1301 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1302 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1303 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1304 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1305 [TIER 1] ✗ All candidates failed
+27.8s 1306 [ORCHESTRATOR] Trying Tier 2...
+27.8s 1307 [TIER 2] Starting beam search (width=12, depth=3)
+27.8s 1308 [TIER 2] Operator pool size: 10
+27.8s 1309 [TIER 2] Exploring depth 1, frontier size: 1
+27.8s 1310 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1311 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1312 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1313 [TIER 2] Exploring depth 2, frontier size: 10
+27.8s 1314 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1315 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1316 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1317 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1318 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1319 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1320 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1321 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1322 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1323 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1324 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1325 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1326 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1327 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1328 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1329 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1330 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1331 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1332 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1333 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (9,9) into shape (9,10)
+27.8s 1334 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,19) into shape (5,19)
+27.8s 1335 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1336 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1337 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1338 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1339 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1340 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1341 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1342 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1343 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1344 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1345 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1346 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1347 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1348 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1349 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1350 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1351 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1352 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1353 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1354 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1355 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1356 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1357 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1358 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1359 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1360 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1361 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1362 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1363 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1364 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1365 [TIER 2] Exploring depth 3, frontier size: 12
+27.8s 1366 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1367 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1368 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1369 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1370 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1371 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1372 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1373 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1374 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1375 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1376 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1377 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1378 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1379 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1380 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1381 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1382 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1383 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1384 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1385 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (19,4) into shape (19,5)
+27.8s 1386 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (9,9) into shape (10,9)
+27.8s 1387 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1388 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1389 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1390 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1391 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1392 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1393 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1394 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1395 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1396 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1397 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1398 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1399 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1400 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1401 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1402 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1403 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1404 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1405 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1406 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1407 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1408 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1409 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1410 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1411 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1412 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1413 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1414 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1415 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1416 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1417 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1418 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1419 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1420 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1421 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1422 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1423 [TIER 2] ✗ Search exhausted
+27.8s 1424 [ORCHESTRATOR] ✗ No programs found, using fallback
+27.8s 1425 [TASK] Solving test case 2/2
+27.8s 1426 Test input: (30, 30) dtype=int64
+27.8s 1427 [ORCHESTRATOR] Trying Tier 1...
+27.8s 1428 [TIER 1] Starting solve (timeout=5s)
+27.8s 1429 [TIER 1] Train pairs: 3
+27.8s 1430 [TIER 1] Trying palette-only...
+27.8s 1431 [TIER 1] Generating feature-driven candidates...
+27.8s 1432 [TIER 1] Generated 28 candidates
+27.8s 1433 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1434 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1435 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1436 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1437 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1438 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1439 [TIER 1] ✗ All candidates failed
+27.8s 1440 [ORCHESTRATOR] Trying Tier 2...
+27.8s 1441 [TIER 2] Starting beam search (width=12, depth=3)
+27.8s 1442 [TIER 2] Operator pool size: 10
+27.8s 1443 [TIER 2] Exploring depth 1, frontier size: 1
+27.8s 1444 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1445 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1446 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1447 [TIER 2] Exploring depth 2, frontier size: 10
+27.8s 1448 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1449 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1450 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1451 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1452 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1453 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+27.8s 1454 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+27.8s 1455 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+27.8s 1456 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1457 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1458 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1459 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1460 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1461 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1462 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1463 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1464 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1465 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1466 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1467 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (9,9) into shape (9,10)
+28.0s 1468 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (4,19) into shape (5,19)
+28.0s 1469 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1470 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1471 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1472 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1473 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1474 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1475 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1476 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1477 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1478 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1479 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1480 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1481 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1482 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1483 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1484 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1485 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1486 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1487 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1488 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1489 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1490 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1491 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1492 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1493 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1494 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1495 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1496 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1497 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1498 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1499 [TIER 2] Exploring depth 3, frontier size: 12
+28.0s 1500 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1501 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1502 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1503 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1504 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1505 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1506 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1507 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1508 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1509 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1510 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1511 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1512 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1513 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1514 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1515 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1516 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1517 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1518 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1519 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (19,4) into shape (19,5)
+28.0s 1520 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (9,9) into shape (10,9)
+28.0s 1521 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1522 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1523 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1524 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1525 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1526 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1527 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1528 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1529 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1530 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1531 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1532 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1533 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1534 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1535 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1536 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1537 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1538 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1539 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1540 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1541 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1542 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1543 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1544 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1545 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1546 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1547 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1548 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1549 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1550 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1551 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1552 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1553 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1554 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1555 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (25,12) into shape (25,13)
+28.0s 1556 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (12,25) into shape (13,25)
+28.0s 1557 [TIER 2] ✗ Search exhausted
+28.0s 1558 [ORCHESTRATOR] ✗ No programs found, using fallback
+28.0s 1559 
+28.0s 1560 ✓ Task 9 complete: 195c6913... (0.2s)
+28.0s 1561 
+28.0s 1562 ================================================================================
+28.0s 1563 TASK 10/10: 1ae2feb7
+28.0s 1564 ================================================================================
+28.0s 1565 [TASK] Converting training pairs...
+28.0s 1566 [TASK] Train pairs: 3
+28.0s 1567 Pair 0: input (11, 16) dtype=int64, output (11, 16) dtype=int64
+28.0s 1568 Pair 1: input (11, 16) dtype=int64, output (11, 16) dtype=int64
+28.0s 1569 Pair 2: input (13, 15) dtype=int64, output (13, 15) dtype=int64
+28.0s 1570 [TASK] Solving test case 1/3
+28.0s 1571 Test input: (10, 20) dtype=int64
+28.0s 1572 [ORCHESTRATOR] Trying Tier 1...
+28.0s 1573 [TIER 1] Starting solve (timeout=5s)
+28.0s 1574 [TIER 1] Train pairs: 3
+28.0s 1575 [TIER 1] Trying palette-only...
+28.0s 1576 [TIER 1] Generating feature-driven candidates...
+28.0s 1577 [TIER 1] Generated 28 candidates
+28.0s 1578 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1579 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1580 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1581 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1582 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1583 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1584 [TIER 1] ✗ All candidates failed
+28.0s 1585 [ORCHESTRATOR] Trying Tier 2...
+28.0s 1586 [TIER 2] Starting beam search (width=12, depth=3)
+28.0s 1587 [TIER 2] Operator pool size: 10
+28.0s 1588 [TIER 2] Exploring depth 1, frontier size: 1
+28.0s 1589 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1590 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1591 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1592 [TIER 2] Exploring depth 2, frontier size: 10
+28.0s 1593 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1594 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1595 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1596 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1597 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1598 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1599 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1600 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1601 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1602 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1603 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1604 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1605 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1606 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1607 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1608 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1609 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1610 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1611 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1612 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (6,6)
+28.0s 1613 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1614 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1615 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1616 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1617 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1618 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1619 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1620 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1621 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1622 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1623 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1624 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1625 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1626 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1627 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1628 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1629 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1630 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1631 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1632 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1633 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1634 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1635 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1636 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1637 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1638 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1639 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1640 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1641 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1642 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1643 [TIER 2] Exploring depth 3, frontier size: 12
+28.0s 1644 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1645 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1646 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1647 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1648 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1649 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1650 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1651 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1652 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1653 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1654 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1655 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1656 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1657 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1658 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1659 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1660 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1661 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1662 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1663 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (6,6)
+28.0s 1664 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1665 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1666 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1667 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1668 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1669 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1670 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1671 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1672 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1673 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1674 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1675 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1676 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1677 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1678 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1679 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1680 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1681 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1682 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1683 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1684 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1685 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1686 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1687 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1688 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1689 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1690 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1691 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1692 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1693 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1694 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1695 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1696 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1697 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1698 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1699 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1700 [TIER 2] ✗ Search exhausted
+28.0s 1701 [ORCHESTRATOR] ✗ No programs found, using fallback
+28.0s 1702 [TASK] Solving test case 2/3
+28.0s 1703 Test input: (8, 15) dtype=int64
+28.0s 1704 [ORCHESTRATOR] Trying Tier 1...
+28.0s 1705 [TIER 1] Starting solve (timeout=5s)
+28.0s 1706 [TIER 1] Train pairs: 3
+28.0s 1707 [TIER 1] Trying palette-only...
+28.0s 1708 [TIER 1] Generating feature-driven candidates...
+28.0s 1709 [TIER 1] Generated 28 candidates
+28.0s 1710 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1711 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1712 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1713 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1714 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1715 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1716 [TIER 1] ✗ All candidates failed
+28.0s 1717 [ORCHESTRATOR] Trying Tier 2...
+28.0s 1718 [TIER 2] Starting beam search (width=12, depth=3)
+28.0s 1719 [TIER 2] Operator pool size: 10
+28.0s 1720 [TIER 2] Exploring depth 1, frontier size: 1
+28.0s 1721 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1722 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1723 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1724 [TIER 2] Exploring depth 2, frontier size: 10
+28.0s 1725 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1726 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1727 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1728 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1729 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1730 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1731 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1732 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1733 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1734 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1735 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1736 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1737 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1738 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1739 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1740 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1741 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1742 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1743 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1744 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (6,6)
+28.0s 1745 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1746 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1747 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1748 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1749 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1750 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1751 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1752 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1753 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1754 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1755 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1756 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1757 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1758 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1759 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1760 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1761 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1762 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1763 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1764 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1765 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1766 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1767 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1768 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1769 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1770 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1771 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1772 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1773 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1774 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1775 [TIER 2] Exploring depth 3, frontier size: 12
+28.0s 1776 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1777 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1778 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1779 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1780 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1781 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1782 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1783 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1784 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1785 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1786 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1787 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1788 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1789 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1790 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1791 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1792 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1793 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1794 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1795 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (6,6)
+28.0s 1796 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1797 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1798 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1799 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1800 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1801 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1802 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1803 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1804 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1805 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1806 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1807 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1808 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1809 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1810 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1811 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1812 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1813 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1814 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1815 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1816 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1817 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1818 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1819 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1820 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1821 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1822 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1823 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1824 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1825 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1826 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1827 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1828 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1829 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1830 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1831 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1832 [TIER 2] ✗ Search exhausted
+28.0s 1833 [ORCHESTRATOR] ✗ No programs found, using fallback
+28.0s 1834 [TASK] Solving test case 3/3
+28.0s 1835 Test input: (8, 15) dtype=int64
+28.0s 1836 [ORCHESTRATOR] Trying Tier 1...
+28.0s 1837 [TIER 1] Starting solve (timeout=5s)
+28.0s 1838 [TIER 1] Train pairs: 3
+28.0s 1839 [TIER 1] Trying palette-only...
+28.0s 1840 [TIER 1] Generating feature-driven candidates...
+28.0s 1841 [TIER 1] Generated 28 candidates
+28.0s 1842 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1843 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1844 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1845 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1846 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1847 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1848 [TIER 1] ✗ All candidates failed
+28.0s 1849 [ORCHESTRATOR] Trying Tier 2...
+28.0s 1850 [TIER 2] Starting beam search (width=12, depth=3)
+28.0s 1851 [TIER 2] Operator pool size: 10
+28.0s 1852 [TIER 2] Exploring depth 1, frontier size: 1
+28.0s 1853 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1854 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1855 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1856 [TIER 2] Exploring depth 2, frontier size: 10
+28.0s 1857 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1858 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1859 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1860 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1861 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1862 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1863 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1864 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1865 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1866 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1867 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1868 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1869 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1870 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1871 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1872 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1873 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1874 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1875 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1876 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,6) into shape (6,6)
+28.0s 1877 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1878 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1879 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1880 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1881 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1882 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1883 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1884 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1885 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1886 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1887 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1888 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1889 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1890 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1891 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1892 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1893 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1894 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1895 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1896 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1897 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1898 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1899 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1900 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1901 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1902 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1903 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1904 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1905 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1906 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1907 [TIER 2] Exploring depth 3, frontier size: 12
+28.0s 1908 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1909 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1910 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1911 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1912 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1913 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1914 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1915 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1916 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1917 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1918 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1919 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1920 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1921 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1922 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1923 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1924 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1925 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1926 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1927 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (6,5) into shape (6,6)
+28.0s 1928 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1929 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1930 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1931 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1932 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1933 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1934 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1935 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1936 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1937 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1938 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1939 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1940 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1941 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1942 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1943 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1944 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1945 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1946 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1947 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1948 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1949 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1950 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1951 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1952 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1953 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1954 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1955 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1956 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1957 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1958 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1959 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (16,5) into shape (16,6)
+28.0s 1960 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (7,13) into shape (8,13)
+28.0s 1961 [ERROR] Exception in _apply_ops: name 'bg' is not defined
+28.0s 1962 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (13,7) into shape (13,8)
+28.0s 1963 [ERROR] Exception in _apply_ops: could not broadcast input array from shape (5,16) into shape (6,16)
+28.0s 1964 [TIER 2] ✗ Search exhausted
+28.0s 1965 [ORCHESTRATOR] ✗ No programs found, using fallback
+28.0s 1966 
+28.0s 1967 ✓ Task 10 complete: 1ae2feb7... (0.1s)
+28.0s 1968 
+28.0s 1969 📊 Progress: 10/10 tasks
+28.0s 1970 ⏱️  Elapsed: 0.0min, Est. remaining: 0.0min
+28.0s 1971 📈 Stats: T1=0, T2=0, T3=0, Fail=16
+28.0s 1972 
+28.0s 1973 ⚠️  Stopping at 10 tasks (DEBUG MODE)
+28.0s 1974 
+28.0s 1975 ================================================================================
+28.0s 1976 ✅ DEBUG RUN COMPLETE!
+28.0s 1977 ================================================================================
+28.0s 1978 
+28.0s 1979 📊 Final Statistics:
+28.0s 1980 Tasks tested: 10
+28.0s 1981 Total time: 0.0 minutes
+28.0s 1982 Avg time/task: 0.1s
+28.0s 1983 
+28.0s 1984 Tier 1 (Fast Symbolic): 0 tasks
+28.0s 1985 Tier 2 (Beam Search): 0 tasks
+28.0s 1986 Tier 3 (LLM + TTA): 0 tasks (disabled)
+28.0s 1987 Failures (fallback): 16 tasks
+28.0s 1988 
+28.0s 1989 Success rate: 0.0% (0/10)
+28.0s 1990 
+28.0s 1991 💾 Debug submission saved to: /kaggle/working/submission_debug.json
+28.0s 1992 
+28.0s 1993 ================================================================================
+28.0s 1994 🔍 DEBUG COMPLETE - Review logs above for failure analysis
+28.0s 1995 ================================================================================
+28.0s 1996 
+28.0s 1997 
+28.0s 1998 ✅ Debug execution complete. Analyze logs to identify issues! 🔍
+28.0s 1999 
+34.0s 2000 /usr/local/lib/python3.11/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+34.0s 2001 warn(
+34.0s 2002 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+34.3s 2003 [NbConvertApp] Writing 218591 bytes to __notebook__.ipynb
+36.9s 2004 /usr/local/lib/python3.11/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+36.9s 2005 warn(
+37.0s 2006 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+37.9s 2007 [NbConvertApp] Writing 597890 bytes to __results__.html

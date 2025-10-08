@@ -1,0 +1,306 @@
+https://www.kaggle.com/models/dfranzen/wb55l_nemomini_fulleval/Transformers/default/1
+
+
+Skip to
+content
+Kaggle
+
+Create
+Home
+
+Competitions
+
+Datasets
+
+Models
+
+Benchmarks
+
+Code
+
+Discussions
+
+Learn
+
+More
+
+
+1
+View Active Events
+
+Search
+
+Daniel Franzen · Created On 2024.11.06
+wb55L_nemomini_fulleval
+dfranzen/wb55l_nemomini_fulleval
+
+wb55L_nemomini_fulleval
+
+Download
+
+Code
+Model Details
+This model does not have a description yet.
+
+Downloads
+2490
+date	Downloads
+Sep 8, 2025	11
+Sep 9, 2025	14
+Sep 10, 2025	4
+Sep 12, 2025	22
+Sep 13, 2025	9
+Sep 15, 2025	8
+Sep 18, 2025	6
+Sep 19, 2025	9
+Sep 20, 2025	13
+Sep 21, 2025	2
+Sep 23, 2025	2
+Sep 24, 2025	6
+Sep 26, 2025	7
+Sep 27, 2025	1
+Sep 28, 2025	1
+Sep 29, 2025	1
+Sep 30, 2025	3
+Oct 4, 2025	1
+120
+in the last 30 days
+Usability
+2.67
+
+Model Variations
+[object Object]
+Variation
+Versions
+Version 1
+
+Downloads
+2490
+120
+
+
+Download
+
+New Notebook
+About Variation
+Fine-Tunable
+Yes
+
+License
+Other (specified in description)
+
+Base Model
+https://huggingface.co/nvidia/Mistral-NeMo-Minitron-8B-Base
+
+This model was used in our submission that scored 53.5 points in the ARC Prize 2024 Kaggle competition.
+
+The notebook used for the submission can be found here: https://www.kaggle.com/code/dfranzen/arc-prize-2024-solution-by-the-architects
+
+the ARChitects (Daniel Franzen and Jan Disselhoff)
+
+Licenced under the nvidia-open-model-licence. See https://developer.download.nvidia.com/licenses/nvidia-open-model-license-agreement-june-2024.pdf for details.
+
+Example Use
+This variation does not have a usage guide yet.
+
+File Explorer
+config.json(1.19 kB)
+"root":{28 items
+"_name_or_path":string"input/nvidia--Mistral-NeMo-Minitron-8B-Base/transformers/default/1"
+"activation":string"silu"
+"architectures":[1 item
+0:string"MistralForCausalLM"
+]
+"attention_dropout":int0
+"bos_token_id":int1
+"eos_token_id":int2
+"head_dim":int128
+"hidden_act":string"silu"
+"hidden_size":int4096
+"initializer_range":float0.02
+"intermediate_size":int11520
+"max_position_embeddings":int8192
+"model_type":string"mistral"
+"num_attention_heads":int32
+"num_hidden_layers":int40
+"num_key_value_heads":int8
+"pad_token_id":int3
+"quantization_config":{10 items
+"bnb_4bit_compute_dtype":string"bfloat16"
+"bnb_4bit_quant_type":string"nf4"
+"bnb_4bit_use_double_quant":booltrue
+"llm_int8_enable_fp32_cpu_offload":boolfalse
+"llm_int8_has_fp16_weight":boolfalse
+"llm_int8_skip_modules":NULL
+"llm_int8_threshold":int6
+"load_in_4bit":booltrue
+"load_in_8bit":boolfalse
+"quant_method":string"bitsandbytes"
+}
+"rms_norm_eps":float0.00001
+"rope_scaling":NULL
+"rope_theta":int1000000
+"sliding_window":NULL
+"tie_word_embeddings":boolfalse
+"torch_dtype":string"float32"
+"transformers_version":string"4.44.2"
+"unsloth_version":string"2024.10.3"
+"use_cache":booltrue
+"vocab_size":int82
+}
+Files
+3.79 GB
+
+config.json
+
+generation_config.json
+
+model.safetensors
+
+special_tokens_map.json
+
+tokenizer.json
+
+tokenizer_config.json
+
+Metadata
+
+Expand All
+Collaborators
+Authors
+DOI Citation
+Provenance
+Activity Overview
+Views
+4131
+date	Views
+Sep 8, 2025	20
+Sep 9, 2025	32
+Sep 10, 2025	28
+Sep 11, 2025	17
+Sep 12, 2025	29
+Sep 13, 2025	20
+Sep 14, 2025	27
+Sep 15, 2025	19
+Sep 16, 2025	17
+Sep 17, 2025	23
+Sep 18, 2025	24
+Sep 19, 2025	13
+Sep 20, 2025	14
+Sep 21, 2025	31
+Sep 22, 2025	21
+Sep 23, 2025	21
+Sep 24, 2025	22
+Sep 25, 2025	23
+Sep 26, 2025	21
+Sep 27, 2025	18
+Sep 28, 2025	25
+Sep 29, 2025	27
+Sep 30, 2025	31
+Oct 1, 2025	16
+Oct 2, 2025	21
+Oct 3, 2025	31
+Oct 4, 2025	25
+Oct 5, 2025	25
+Oct 6, 2025	19
+660
+in the last 30 days
+Downloads
+2490
+date	Downloads
+Sep 8, 2025	11
+Sep 9, 2025	14
+Sep 10, 2025	4
+Sep 12, 2025	22
+Sep 13, 2025	9
+Sep 15, 2025	8
+Sep 18, 2025	6
+Sep 19, 2025	9
+Sep 20, 2025	13
+Sep 21, 2025	2
+Sep 23, 2025	2
+Sep 24, 2025	6
+Sep 26, 2025	7
+Sep 27, 2025	1
+Sep 28, 2025	1
+Sep 29, 2025	1
+Sep 30, 2025	3
+Oct 4, 2025	1
+120
+in the last 30 days
+Engagement
+0.60276
+downloads per view
+Comments
+0
+posted
+Top Contributors
+Detail View
+Views
+[object Object]
+09/15
+09/22
+09/29
+10/06
+0
+20
+40
+date	Views
+Sep 8, 2025	20
+Sep 9, 2025	32
+Sep 10, 2025	28
+Sep 11, 2025	17
+Sep 12, 2025	29
+Sep 13, 2025	20
+Sep 14, 2025	27
+Sep 15, 2025	19
+Sep 16, 2025	17
+Sep 17, 2025	23
+Sep 18, 2025	24
+Sep 19, 2025	13
+Sep 20, 2025	14
+Sep 21, 2025	31
+Sep 22, 2025	21
+Sep 23, 2025	21
+Sep 24, 2025	22
+Sep 25, 2025	23
+Sep 26, 2025	21
+Sep 27, 2025	18
+Sep 28, 2025	25
+Sep 29, 2025	27
+Sep 30, 2025	31
+Oct 1, 2025	16
+Oct 2, 2025	21
+Oct 3, 2025	31
+Oct 4, 2025	25
+Oct 5, 2025	25
+Oct 6, 2025	19
+Downloads
+[object Object]
+09/15
+09/22
+09/29
+0
+10
+20
+30
+date	Downloads
+Sep 8, 2025	11
+Sep 9, 2025	14
+Sep 10, 2025	4
+Sep 12, 2025	22
+Sep 13, 2025	9
+Sep 15, 2025	8
+Sep 18, 2025	6
+Sep 19, 2025	9
+Sep 20, 2025	13
+Sep 21, 2025	2
+Sep 23, 2025	2
+Sep 24, 2025	6
+Sep 26, 2025	7
+Sep 27, 2025	1
+Sep 28, 2025	1
+Sep 29, 2025	1
+Sep 30, 2025	3
+Oct 4, 2025	1
+

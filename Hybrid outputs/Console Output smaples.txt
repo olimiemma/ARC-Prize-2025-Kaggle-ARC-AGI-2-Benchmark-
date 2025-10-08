@@ -1,0 +1,67 @@
+Requirement already satisfied: intel-cmplr-lib-ur==2024.2.0 in /usr/local/lib/python3.11/dist-packages (from intel-openmp<2026,>=2024->mkl->numpy>=1.17->bitsandbytes) (2024.2.0)
+🚀 Initializing HYBRID SOTA ARC Solver...
+================================================================================
+================================================================================
+  🎯 HYBRID SOTA ARC SOLVER - Starting Execution
+================================================================================
+🔄 Loading LLM from /kaggle/input/wb55l_nemomini_fulleval/transformers/default/1...
+⚠️ Primary model failed: Using `bitsandbytes` 4-bit quantization requires the latest version of bitsandbytes: `pip install -U bitsandbytes`
+🔄 Trying fallback model /kaggle/input/qwen-3/transformers/0.6b/1...
+✅ Fallback model loaded
+🔧 Initializing Hybrid Solver...
+✅ Solver ready!
+Tier 1: Fast Symbolic (5s timeout)
+  - Tier 2: Beam Search (15s timeout, beam=12, depth=3)
+  - Tier 3: LLM + TTA (30s timeout, max_attempts=5)
+
+================================================================================
+  🧠 Solving Tasks
+================================================================================
+  ✓ Task 1/120: 0934a4d8... (31.9s)
+
+
+
+
+
+Progress: 40/120 tasks
+  ⏱️  Elapsed: 33.3min, Est. remaining: 66.6min
+  📈 Stats: T1=0, T2=0, T3=0, Fail=61
+  ✓ Task 50/120: 67e490f4... (35.2s)
+📊 Progress: 60/120 tasks
+  ⏱️  Elapsed: 49.2min, Est. remaining: 49.2min
+  📈 Stats: T1=0, T2=0, T3=0, Fail=88
+📊 Progress: 80/120 tasks
+  ⏱️  Elapsed: 63.5min, Est. remaining: 31.7min
+  📈 Stats: T1=0, T2=0, T3=0, Fail=114
+Progress: 100/120 tasks
+  ⏱️  Elapsed: 78.0min, Est. remaining: 15.6min
+  📈 Stats: T1=0, T2=0, T3=0, Fail=142
+  ✓ Task 100/120: d35bdbdc... (92.6s)
+📊 Progress: 120/120 tasks
+  ⏱️  Elapsed: 92.8min, Est. remaining: 0.0min
+  📈 Stats: T1=0, T2=0, T3=0, Fail=171
+
+
+===============================================================================
+  ✅ SOLVING COMPLETE!
+================================================================================
+
+
+
+
+
+
+Final Statistics:
+  Total tasks: 120
+  Total time: 93.3 minutes
+  Avg time/task: 46.7s
+  Tier 1 (Fast Symbolic): 0 tasks
+  Tier 2 (Beam Search): 0 tasks
+  Tier 3 (LLM + TTA): 0 tasks
+  Failures (fallback): 172 tasks
+
+
+
+
+
+
