@@ -1,0 +1,325 @@
+Below is a **complete, “agent-ready” brief** of the ARC Prize 2025 competition that explains the problem, required deliverables, the tasks to perform, and why each step matters—so another AI agent could start building solutions immediately.
+
+---
+
+# Quick-start Checklist (read this first)
+
+* **Parse the data & spec exactly** (train/test JSONs; two attempts per test input; strict equality scoring).
+* **Build a local scoring harness** that reproduces Kaggle’s evaluation (two attempts, exact match, multi-test tasks).
+* **Ship a robust baseline** (pattern detection + safe fallbacks) to guarantee a valid `submission.json`.
+* **Design a micro-DSL + guided search** to induce programs from train pairs; verify candidates on *all* train examples.
+* **Always produce two *diverse* attempts** per test input (different priors/tracks) inside a **per-task time budget**.
+* **Harden for Kaggle constraints** (≤12h runtime, **no internet**, 1 submission/day, deterministic runs).
+* **Document & package** (reproducible notebook, environment, and—if you pursue Paper Award—clear method write-up).
+
+---
+
+# 1) Competition Overview (what you’re solving)
+
+**Goal:** Create an algorithm that solves **novel abstract reasoning tasks** presented as small color grids (integers 0–9). For each task you’re given a few **train I/O pairs** that demonstrate the rule, plus **test input(s)**. You must **construct the exact test output grid(s)**. Only **exact matches** earn credit.
+
+**Key properties:**
+
+* **Novelty:** Tasks are unlike any you’ve seen; memorization or large supervised datasets don’t help.
+* **Reasoning over pixels:** The solution often requires detecting structure (symmetry, components, tiling, palette remapping) and transforming it via a **compositional rule**.
+* **Two attempts per test input:** You submit **two** candidate outputs (`attempt_1`, `attempt_2`) for **each** test input; if either is exact, you score for that item.
+
+**Official pages (keep open):**
+
+* Competition: [https://www.kaggle.com/competitions/arc-prize-2025](https://www.kaggle.com/competitions/arc-prize-2025)
+* ARC Prize site & guide: [https://arcprize.org/competitions/2025](https://arcprize.org/competitions/2025) and [https://arcprize.org/guide](https://arcprize.org/guide)
+
+---
+
+# 2) Data & Files (what you’re given)
+
+**Files (JSON):**
+
+* `arc-agi_training-challenges.json` and `arc-agi_training-solutions.json`
+  Training tasks with both demos and ground-truth test outputs (use for development).
+* `arc-agi_evaluation-challenges.json` and `arc-agi_evaluation-solutions.json`
+  Evaluation tasks with solutions (use for offline validation only).
+* `arc-agi_test-challenges.json`
+  **Hidden at rerun**: tasks scored on the leaderboard; contains only train pairs and test inputs (no solutions). The file shown during interactive runs is a placeholder; **Kaggle swaps it** at submission time.
+* `sample_submission.json`
+  The exact output schema to follow.
+
+**Task structure:**
+
+```json
+{
+  "task_id_xyz": {
+    "train": [
+      {"input": [[...]], "output": [[...]]},
+      {"input": [[...]], "output": [[...]]},
+      ...
+    ],
+    "test": [
+      {"input": [[...]]},
+      {"input": [[...]]}  // sometimes 2 test inputs
+    ]
+  }
+}
+```
+
+* A **grid** is a 2D list of ints in **[0..9]** (visualized as colors), size **1×1 to 30×30**.
+* Your algorithm must **choose** the test output grid’s **height, width, and every cell value**.
+
+---
+
+# 3) Submission & Scoring (what you must deliver)
+
+**Submission artifact:** A single file named **`submission.json`** mapping **every test `task_id`** to a list of objects, **one per test input**, each with exactly **two** predictions:
+
+```json
+{
+  "00576224": [
+    {"attempt_1": [[...]], "attempt_2": [[...]]}
+  ],
+  "12997ef3": [
+    {"attempt_1": [[...]], "attempt_2": [[...]]},
+    {"attempt_1": [[...]], "attempt_2": [[...]]}
+  ],
+  ...
+}
+```
+
+**Rules that matter:**
+
+* **Two attempts are mandatory** for every test input—even if identical.
+* If **either** attempt matches the ground truth **exactly**, that test item counts as 1; else 0.
+* Final score = average over all test outputs across all tasks.
+
+**Kaggle runtime & ops constraints:**
+
+* **Code Competition notebook** (scored by rerun).
+* **No internet** during scoring; **≤12 hours** runtime.
+* You may attach publicly available models/data via Kaggle **Datasets/Models** (mounted locally).
+* **1 submission per day**; you may mark **up to 2** as final for private leaderboard.
+
+**Why this matters:** Submissions that violate structure (missing tasks, wrong ordering, fewer than two attempts, illegal values) may be rejected or score 0, regardless of solution quality.
+
+---
+
+# 4) Core Technical Problem (how to think about it)
+
+At its heart, each task demands **inducing a function** (f) that maps an input grid to an output grid, consistent with all given train pairs:
+
+* Detect salient structure (connected components, borders, symmetry axes, repeated motifs).
+* Decide **transformations** (palette mapping; copy/move/reflect/rotate components; pad/crop/scale; tile; translate).
+* Compose these operations into a **short program** that, when executed on the test input(s), yields the correct output(s).
+
+**Implications for solution design:**
+
+* **Program synthesis beats templates:** Many tasks need composing 2–6 atomic operations; finite templates won’t generalize.
+* **Exact verification is cheap:** You must satisfy train pairs exactly—use this as a **hard filter** in search.
+* **Compute matters:** Within 12 hours, you need **bounded per-task search**, caching, and two **diverse** attempts.
+
+---
+
+# 5) Deliverables (what another agent must produce)
+
+1. **A Kaggle-ready notebook** that:
+
+   * Loads the correct test JSON (`arc-agi_test-challenges.json` at rerun).
+   * Produces **two predictions per test input** for **all** tasks.
+   * Writes a valid `submission.json` within time and resource limits.
+   * Is **deterministic** (fixed seeds, no nondeterministic libs), **self-contained**, and **internet-free**.
+
+2. **A local scoring harness** (offline) that:
+
+   * Recreates Kaggle scoring on the **evaluation split** (two attempts; exact match).
+   * Supports rapid iteration and regression checks before using a daily submission.
+
+3. **A baseline solver** (robust, format-correct) to guarantee submissions:
+
+   * Pattern detectors (rotation/flip/transpose; tiling/scale; palette remap).
+   * Shape-safe fallbacks (pad/crop policies inferred from train; never crash).
+
+4. **A reasoning solver** (for competitive scores):
+
+   * A **micro-DSL** of grid ops (see §6) + a **guided search** or **program induction** loop.
+   * **Two-prior strategy** for **attempt_1** and **attempt_2** (e.g., palette-first vs symmetry-first).
+   * An **exact verifier** on train pairs; optional **learned verifier** for tie-breaking.
+
+5. **Operations artifacts**:
+
+   * Reproducibility doc (env, seeds, hardware, expected time).
+   * Logs/metrics (per-task timing, search steps, selected program).
+   * If aiming for Paper Award: a **public write-up** explaining assumptions, method, ablations, and failure modes.
+
+---
+
+# 6) Tasks to Perform (step-by-step plan for an agent)
+
+### A. Data ingestion & schema compliance
+
+* Parse tasks from JSON; preserve **order** of `test` inputs per task.
+* Validate grids (values in 0..9; sizes 1..30).
+* **Why it matters:** Any schema mistake → invalid submission or silent scoring zero.
+
+### B. Build the **evaluation harness**
+
+* Given a `submission.json` and evaluation solutions, compute accuracy: for each test output, **attempt_1 OR attempt_2 equals ground truth**.
+* Include multi-test tasks; strict exact-match equality.
+* **Why it matters:** Lets you improve without burning daily submissions.
+
+### C. Baseline solver (robustness first)
+
+* Implement **train-grounded** pattern checks:
+
+  * **Exact palette mapping** (one-to-one): check consistent per-pixel mapping across all train pairs.
+  * **Many-to-one palette remap** (co-occurrence majority).
+  * **Tiling/scale** (whole-number ratios consistent across pairs).
+  * **Symmetries** (rot90 k, flip axes), only if validated by train pairs.
+  * **Transpose** (if validated).
+  * **Pad/Crop policy** (consistent `ΔH, ΔW` across pairs).
+  * **Translation** (estimate dx, dy via centroid shifts of dominant color/components).
+* If no rule fits, output **shape-safe fallbacks** (e.g., pad/crop input) as last resort.
+* **Why it matters:** Guarantees valid `submission.json` and catches low-hanging fruit quickly.
+
+### D. Micro-DSL design (operations that compose)
+
+A minimal yet expressive op set (all pure, deterministic):
+
+* **Geometric:** `rotate(k)`, `flip(axis)`, `transpose`, `translate(dx,dy,fill)`, `pad_crop(dh,dw,fill)`, `tile(hr,wr)`
+* **Component:** `label_cc()`, `map_per_component(fn)`, `copy/lift/largest_component()`
+* **Color:** `palette_map({src→dst})`, `recolor(condition)`
+* **Selection/structure:** mask borders, frames, checker/stripe masks, symmetry axes detection
+* **Why it matters:** Most ARC tasks can be expressed as a short program (2–6 ops) from this vocabulary.
+
+### E. Program induction (search) with **exact verification**
+
+* **Feature extraction** from train pairs (dims, palette deltas, CC stats, symmetry scores, border signatures).
+* Use features to choose **priors** (e.g., “palette-first” vs “symmetry-first”).
+* **Enumerate** short programs (depth 1–4) with **beam search** (e.g., beam 8–16).
+* **Prune early** with cheap constraints:
+
+  * If train preserves histogram (modulo palette relabel), prefer palette ops.
+  * If size ratios are constant, favor `tile(hr,wr)` or `pad_crop(dh,dw)`.
+  * If CC counts are preserved, avoid destructive ops.
+* **Verify** candidates on **all** train pairs (exact equality). Keep only survivors.
+* **Why it matters:** Exact verification is the ground truth filter; it converts search into reliable solutions.
+
+### F. Two attempts = two diverse routes
+
+* **Attempt 1**: Best program from **prior A** (e.g., palette-map-first route).
+* **Attempt 2**: Best program from **prior B** (e.g., symmetry/component-first route).
+* If no programs survive, emit **two distinct, train-validated single-step transforms** (e.g., transpose vs pad/crop).
+* **Why it matters:** The second, *different* route materially increases hit rate on hidden tests.
+
+### G. Time/compute budgeting (to pass Kaggle rerun)
+
+* **Per-task wall clock cap** (e.g., 30–120s depending on complexity).
+* **Node expansion cap** (stop expanding search trees once limit reached).
+* **Cache** re-usable feature computations (CC labelings, symmetry maps).
+* **Deterministic** seeds across all randomized choices.
+* **Why it matters:** Ensures total runtime ≤12h, keeps results reproducible.
+
+### H. Packaging & submission
+
+* Produce `submission.json` with **all task_ids** and **two attempts** per test input in correct order.
+* Remove any unused heavy deps (no accidental internet calls).
+* Validate file size and schema locally; then **Commit & Submit** from the competition page.
+* **Why it matters:** Avoids avoidable 0-scores (format errors, timeouts, forbidden calls).
+
+### I. Measurement & iteration (make progress visible)
+
+* Track **per-task**: time used, programs tried, op histograms, final program length.
+* Maintain **error buckets** (e.g., size-change, pure recolor, symmetry-mirror, occlusion).
+* Run **ablations** (with and without specific ops/priors/verifier).
+* **Why it matters:** Converts guesswork into controlled improvements and supports a later paper.
+
+### J. (Optional) Lightweight learned verifier
+
+* Train a small CNN/logistic head on **synthetic** or train-derived pairs to score candidate outputs (plausibility, artifact penalties).
+* Use it **after** exact train consistency to break ties or rank beams.
+* **Why it matters:** When many programs pass train checks, a verifier can prioritize better generalizers for test inputs.
+
+---
+
+# 7) Operational Constraints & Compliance (don’t get DQ’d)
+
+* **No internet** during scoring; mount all models/data via Kaggle’s Datasets/Models.
+* **≤12 hours** runtime; prefer L4x4 if available but still cap per-task budgets.
+* **1 submission/day** (team-wide); choose *2 final submissions* near the end for private leaderboard.
+* **Open source** requirements apply if you win prizes; ensure third-party licenses are OSI-approved.
+* **Identity verification** (Persona) must be complete to submit and place on leaderboards.
+
+---
+
+# 8) Minimal Pseudocode (agent can start here)
+
+```python
+# Load test tasks (Kaggle will swap hidden file at rerun)
+tasks = load_json("arc-agi_test-challenges.json")
+
+submission = {}
+for task_id, task in tasks.items():
+    outputs = []
+    for test in task["test"]:
+        x = np.array(test["input"])
+        # Step 1: features & priors
+        feats = extract_features(task["train"])
+        priorA, priorB = choose_priors(feats)
+
+        # Step 2: guided search with exact verification
+        progA = induce_program(task["train"], priorA, depth=4, beam=12, budget=TIME_CAP)
+        progB = induce_program(task["train"], priorB, depth=4, beam=12, budget=TIME_CAP) if progA is None else None
+
+        # Step 3: produce two diverse attempts
+        y1 = exec_or_grounded_fallback(x, progA, task["train"])
+        y2 = exec_or_alternate_route(x, progB, task["train"], priorB)
+
+        outputs.append({"attempt_1": y1.tolist(), "attempt_2": y2.tolist()})
+    submission[task_id] = outputs
+
+save_json("submission.json", submission)
+```
+
+---
+
+# 9) Why each component matters (summary)
+
+* **Schema-correct submission** → the only way to score.
+* **Local harness** → iterate without wasting the daily quota.
+* **Micro-DSL + Search + Verification** → solves truly novel tasks; templates won’t scale.
+* **Two diverse attempts** → free ensemble that measurably increases hits.
+* **Time budgeting & determinism** → pass Kaggle rerun reliably; reproducible results.
+* **Logs & error buckets** → enable targeted improvements and a publishable paper.
+
+---
+
+# 10) Practical Tips & Traps
+
+* Multi-test tasks: **never** reuse predictions; solve each test input separately.
+* Shape changes: infer consistent **scale/tiling** or **pad/crop** from train; don’t guess blindly.
+* Palette operations: support both **one-to-one** and **many-to-one** remaps.
+* Avoid “random” fallbacks (e.g., checkerboards) unless justified by train evidence.
+* Cache everything cheap (CC labels, symmetry axes, masks).
+* Keep the DSL **small** and the search **shallow** at first; expand only if time allows.
+
+---
+
+# 11) What to deliver next (immediately actionable)
+
+1. Implement: parser, harness, and a **robust baseline** (validated symmetries, palette remap, tiling, pad/crop, translate).
+2. Add: **micro-DSL** with 10–20 ops and an **exact-verification** beam search (depth 2–4).
+3. Produce: **two-prior** attempts per test (palette-first vs symmetry/component-first).
+4. Instrument: per-task time caps and logs; verify `submission.json`.
+5. Submit once to confirm pipeline, then iterate based on offline harness ablations.
+
+---
+
+## Validation (requirements check)
+
+**Covered:** problem statement, deliverables, tasks, and why each matters—plus data schema, scoring, runtime rules, two-attempt requirement, and an actionable build plan.
+**Needed before coding:** none beyond access to the Kaggle dataset in your notebook environment; if aiming for Paper Award, decide on license and documentation style up front.
+
+---
+
+**Reference URLs (plain):**
+Competition page: [https://www.kaggle.com/competitions/arc-prize-2025](https://www.kaggle.com/competitions/arc-prize-2025)
+ARC Prize guide: [https://arcprize.org/guide](https://arcprize.org/guide)
+ARC Prize 2025 info: [https://arcprize.org/competitions/2025](https://arcprize.org/competitions/2025)
+
