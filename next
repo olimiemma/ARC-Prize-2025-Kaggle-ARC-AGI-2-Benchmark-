@@ -1,0 +1,26 @@
+🚀 Want to Improve Toward SOTA?
+
+  Easy Upgrades (Could add +5-10%)
+
+  1. Expand DSL to 30-40 operations
+    - Add object-level operations
+    - More spatial transforms
+  2. Increase composition depth to 3
+    - Will increase runtime 3-5x
+  3. Add simple heuristics
+    - Prefer shorter programs
+    - Boost frequently successful operations
+
+  Hard Upgrades (Would need significant work)
+
+  4. Add LLM integration (+10-15%)
+    - Would need API access (violates Kaggle offline rule)
+    - Or use local model (huge download, slow)
+  5. Implement test-time training (+5-10%)
+    - Would need training loop, significant compute
+  6. Build ensemble (+3-5%)
+    - Run multiple solvers, vote on outputs
+  7. Full object-centric architecture (+5-8%)
+    - Would need slot-attention model, training data
+
+

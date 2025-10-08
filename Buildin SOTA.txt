@@ -1,0 +1,102 @@
+Building a state-of-the-art (SOTA) solver using LLMs and Test-Time Training (TTA) is a significant shift from a self-contained program synthesis approach. It treats the problem not as a search problem, but
+  as a reasoning and code-generation problem, guided by the LLM.
+
+  Here is an overview of the approach.
+
+  Core Concept: LLM as a Reasoning Engine
+
+
+  The fundamental idea is to use a Large Language Model (LLM) as a "colleague" or a "reasoning engine." Instead of exhaustively searching through a predefined set of operations, you present the ARC task to the LLM in a
+   carefully crafted prompt and ask it to deduce the transformation rule. The "Test-Time Training" part is a feedback loop where you allow the LLM to refine its incorrect guesses based on the specific task's training
+  examples.
+
+  ---
+
+  Architectural Components
+
+
+  A SOTA system would be composed of several key components:
+
+
+  1. Grid Representation & Serializer:
+   * Goal: Convert the visual grid into a text format the LLM can understand.
+   * Method: This is often done using a simple ASCII-like format, JSON arrays, or a custom string serialization (e.g., R3G4B2 for "3x Red, 4x Green, 2x Blue").
+   * Example:
+
+
+   1     Input Grid:
+   2     [[1, 2], [3, 4]]
+   3     Output Grid:
+   4     [[2, 1], [4, 3]]
+
+
+
+  2. Advanced Prompt Engineering:
+   * Goal: Frame the ARC task as a solvable, in-context learning problem for the LLM.
+   * Method: The prompt is the most critical piece. It must include:
+       * The Goal: A clear instruction, e.g., "You are an expert at solving abstract reasoning puzzles. Your task is to find a general transformation rule that maps the input grid to the output grid."
+       * The Language: A definition of the Domain-Specific Language (DSL) the LLM must use to express its answer (e.g., rotate(90), flip('h'), recolor({1:2, 2:1})).
+       * The Examples: All of the task's training pairs, serialized into the text format.
+       * The Request: A final instruction asking the LLM to output only a program in the specified DSL.
+
+
+  3. The Language Model (The "Brain"):
+   * Goal: To understand the prompt and generate a candidate program.
+   * Method: This is typically a powerful, API-driven model like OpenAI's GPT-4 or Anthropic's Claude 3. The model's ability to perform in-context reasoning is what makes this approach work. It's not just pattern
+     matching; it's attempting to form a genuine hypothesis about the transformation.
+
+
+  4. The DSL & Executor (The "Hands"):
+   * Goal: To provide a safe, verifiable, and constrained output format for the LLM and to run the generated code.
+   * Method: This is the same DSL concept from the hybrid solver. The LLM writes a program (e.g., [('geom', ('rotate90',)), ('color_map', ({1:5, 2:6}))]). The Python-based executor then runs this program on the
+     training inputs.
+
+
+  5. The Verifier & Feedback Generator (The "Critic"):
+   * Goal: To check if the LLM's program is correct and, if not, provide useful feedback.
+   * Method:
+       * The Verifier compares the output of the Executor against the expected training outputs.
+       * If they don't match, the Feedback Generator creates an error message. This is the key to TTA. The feedback can't just be "Wrong." It must be descriptive, e.g., "Error: Your program produced a 4x4 grid, but a 
+         5x5 grid was expected." or "Error: The colors in the output are correct, but their positions are wrong."
+
+  ---
+
+
+  Step-by-Step Workflow: The Test-Time Training Loop
+
+  This iterative loop is what allows the model to "train" or "adapt" at test time.
+
+
+  Step 1: Initial Prompt
+   * The system assembles the full prompt with the task goal, DSL definition, and all training pairs. It sends this to the LLM.
+
+
+  Step 2: Generation
+   * The LLM analyzes the examples and generates a candidate program in the DSL.
+       * LLM's thought process (internal monologue): "It looks like the input grid is being rotated 90 degrees, and then the color blue is replaced with red."
+       * LLM Output: [('geom', ('rotate90',)), ('color_map', ({1:5}))]
+
+
+  Step 3: Execution & Verification
+   * The Executor runs this program on all training inputs.
+   * The Verifier checks the results. Let's assume it fails on the second training example.
+
+
+  Step 4: Feedback Loop (The TTA part)
+   * If Verification Fails:
+       1. The Feedback Generator creates an error message: "Feedback: Your program worked for train_example_1 but failed for train_example_2. The output shape was correct, but the colors were wrong."
+       2. The system appends this interaction to the prompt history. The new prompt now contains:
+           * The original prompt.
+           * The LLM's failed program.
+           * The specific feedback.
+       3. The system asks the LLM to try again: "Based on the feedback, please provide a new, corrected program."
+       4. The process returns to Step 2. The LLM, now with more context, might generate a better program.
+
+
+   * If Verification Succeeds:
+       1. The program is deemed correct.
+       2. The Executor runs the validated program on the actual test input grid.
+       3. This final output is used as the prediction for the submission file.
+
+
+  This loop continues until a correct program is found or a predefined limit (e.g., 5 retry attempts) is reached to prevent infinite loops and control costs.

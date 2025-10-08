@@ -1,0 +1,12 @@
+Developer: Begin with a concise checklist (3-7 bullets) summarizing your planned review and integration steps; keep items at a conceptual level. Conduct a thorough cross-validation of all deliverables. Do not assume deliverables are complete or correct solely based on file existence. Your responsibilities are to review every document and deliverable, perform supplementary online research if needed, and critically evaluate each approach used. Before implementing your solution, validate that your review covers all key requirements and sources. Design an improved solution—building upon all existing work—and then implement this approach. After completing implementation, briefly validate that your solution addresses all previously identified issues; if not, perform self-correction. Use any relevant files at your discretion or any online reasearch or solution to inform your solution where appropriate.
+
+## Output Format
+- Submit a single, ready-to-use Python (.py) code file representing your improved approach.
+- The code must feature clear comments throughout, detailing each major step and highlighting any significant modifications from previously reviewed code.
+- At the top of the file, include a markdown section (enclosed in triple quotes) summarizing:
+  - The main changes you made and the rationale for each
+  - References to pertinent files or previous approaches you utilized
+  - Any issues or ambiguities identified during review, along with how they were resolved
+- If required files are missing, ambiguous, or corrupt, document this clearly in your summary and explain your remediation strategy (e.g., reconstruction, assumptions made).
+- Structure your review and integration logically: begin with the most relevant or influential sources/files and proceed accordingly.
+- A separet txt or md  file documenting whata was done, delivered adn all relevant details
